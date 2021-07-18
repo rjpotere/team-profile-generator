@@ -70,6 +70,7 @@ menu = () => {
             }
         ]).then(({ name, id, email, gitHub }) => {
             const engineer = new Engineer(name, id, email, gitHub);
+            newEmployee.push(engineer)
             console.log(engineer);
             const fileName = `index.html`;
             const htmlString = convertPrompts(engineer);
@@ -105,7 +106,7 @@ createIntern = () => {
         }
     ]).then(({ name, id, email, school }) => {
         const intern = new Intern(name, id, email, school);
-        console.log(intern.getSchool());
+        console.log("SCHOOl:" + intern.getSchool());
         intern.getRole();
         console.log(intern);
         newEmployee.push(intern);
@@ -131,14 +132,14 @@ createProfile = () => {
 
             } if (data.employeeType === 'Intern') {
                 createIntern();
-            } else {return}
+            } else { return }
         })
 }
 
 createProfile();
 
 printHtml = (fileName, htmlString) => {
-    fs.writeFileSync(fileName, htmlString,{flag: "a"});
+    fs.writeFileSync(fileName, htmlString, { flag: "a" });
 
 }
 
@@ -146,35 +147,66 @@ convertPrompts = () => {
     let printIndex = '';
     newEmployee.forEach(employee => {
         if (employee.getRole() === 'Intern') {
-            printIndex += 
-            `<div>
+            printIndex +=
+                `
+            <div id="profileDiv">
                 <h1>${employee.name}</h1>
-                <h2>${employee.getRole()}</h2>
-                <h3>${employee.id}</h3>
+                <p>${employee.getRole()}<span>🎓</span></p>
+            </div>
+                <div id="infoDiv">
+                <p>${employee.id}</p>
                 <p>${employee.getSchool()}</p>
-            </div>`
+                </div>
+            `
         }
         if (employee.getRole() === 'Manager') {
-            printIndex += `<div>
-            <h1>${employee.name}</h1>
-            <h2>${employee.getRole()}</h2>
-            <h3>${employee.id}</h3>
-            <p>${employee.getOfficeNumber()}</p>
-        </div>`
-        }
-        if (employee.getRole() === 'Engineer') {
-            printIndex += 
-            `<div>
+            printIndex +=
+                `
+            <div id="profileDiv">
                 <h1>${employee.name}</h1>
-                <h2>${employee.getRole()}</h2>
-                <h3>${employee.id}</h3>
+                <p>${employee.getRole()}<span>☕️</span></p>
+            </div>
+                <div id="infoDiv">
+                <p>${employee.id}</p>
+                <p>${employee.getOfficeNumber()}</p>
+                </div>
+            `
+        }
+        if (employee.getRole() === "Engineer") {
+            printIndex +=
+                `
+            <div id="profileDiv">
+                <h1>${employee.name}</h1>
+                <p>${employee.getRole()}<span>🥽</span></p>
+            </div>
+                <div id="infoDiv">
+                <p>${employee.id}</p>
                 <p>${employee.getGithub()}</p>
-            </div>`
+                </div>
+            `
         }
 
     })
-return printIndex;
-}
+
+    let pageHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<div class="all-employees">
+${printIndex}
+</div>
+
+</body>
+</html>`
+
+    return pageHtml;
+};
+
 
 
 menu();
