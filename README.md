@@ -1,5 +1,38 @@
-# team-profile-generator
+# Team Profile Generator 
 
-User will run npm install to use this application.
+  ## **Table of Contents**
+  1. [license](#license)
+  2. [Description](#description)
+  3. [Installation Instructions](#installation-instructions)
+  4. [Usage information](#usage-information)
+  5. [Contribution Guidelines](#contribution-guidelines)
+  6. [Test Instructions](#test-instructions)
+  7. [Questions?](#questions)
 
-The user will be prompted to add employees based on role. Once the employee is added, an html file is created. The file does not currently allow to add each employee, it is currently overwriting the file. This will be turned in a second time when finished properly. 
+  ## **License:** 
+ ![photo](https://img.shields.io/badge/MIT-license-brightgreen)
+
+  This application is covered under license type: MIT
+
+  ## **Description:** 
+ A command line app that allows the user to input new employees, and renders a HTML page. 
+
+![photo](images/profile.png)
+  ## **Installation Instructions:**
+ N/A 
+
+  ## **Usage Information:** 
+Open the terminal and run node index. 
+
+  ## **Contribution Guidelines:**
+ N/A 
+
+  ## **Test Instructions:** 
+N/A
+
+  ## **Questions:**
+
+  Github Profile: [Rjpotere](https://github.com/Rjpotere).
+
+  Contact me by email with additional questions: [Ryan.potere@gmail.com](mailto:Ryan.potere@gmail.com)
+

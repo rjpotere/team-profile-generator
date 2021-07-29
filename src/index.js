@@ -192,10 +192,10 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h2>Name: ${employee.name}</h2>
+                <header>Name: ${employee.name}</header>
                 <p>Role: ${employee.getRole()}<span>🎓</span></p>
                 <p>Id: ${employee.id}</p>
-                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>Email:<a href = "mailto:${employee.email}">${employee.email}</a></p>
                 <p>School: ${employee.getSchool()}</p>
                 </div>
             `
@@ -204,10 +204,10 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h2>Name: ${employee.name}</h2>
+                <header>Name: ${employee.name}</header>
                 <p>Role: ${employee.getRole()}<span>☕️</span></p>
                 <p>Id: ${employee.id}</p>
-                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>Email:<a href = "mailto:${employee.email}">${employee.email}</a></p>
                 <p>Office Number: ${employee.getOfficeNumber()}</p>
                 </div>
             `
@@ -216,10 +216,10 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h2>Name: ${employee.name}</h2>
+                <header>Name: ${employee.name}</header>
                 <p>Role: ${employee.getRole()}<span>🥽</span></p>
                 <p>Id: ${employee.id}</p>
-                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>Email:<a href = "mailto:${employee.email}">${employee.email}</a></p>
                 <p>Github:<a href = "https://github.com/${employee.getGithub()}">${employee.getGithub()}</a></p>
                 </div>
             `
