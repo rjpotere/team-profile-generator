@@ -192,12 +192,11 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h1>${employee.name}</h1>
-                <p>${employee.getRole()}<span>🎓</span></p>
-            </div>
-                <div id="infoDiv">
-                <p>${employee.id}</p>
-                <p>${employee.getSchool()}</p>
+                <h2>Name: ${employee.name}</h2>
+                <p>Role: ${employee.getRole()}<span>🎓</span></p>
+                <p>Id: ${employee.id}</p>
+                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>School: ${employee.getSchool()}</p>
                 </div>
             `
         }
@@ -205,12 +204,11 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h1>${employee.name}</h1>
-                <p>${employee.getRole()}<span>☕️</span></p>
-            </div>
-                <div id="infoDiv">
-                <p>${employee.id}</p>
-                <p>${employee.getOfficeNumber()}</p>
+                <h2>Name: ${employee.name}</h2>
+                <p>Role: ${employee.getRole()}<span>☕️</span></p>
+                <p>Id: ${employee.id}</p>
+                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>Office Number: ${employee.getOfficeNumber()}</p>
                 </div>
             `
         }
@@ -218,12 +216,11 @@ convertPrompts = () => {
             printIndex +=
                 `
             <div id="profileDiv">
-                <h1>${employee.name}</h1>
-                <p>${employee.getRole()}<span>🥽</span></p>
-            </div>
-                <div id="infoDiv">
-                <p>${employee.id}</p>
-                <p>${employee.getGithub()}</p>
+                <h2>Name: ${employee.name}</h2>
+                <p>Role: ${employee.getRole()}<span>🥽</span></p>
+                <p>Id: ${employee.id}</p>
+                <p><a href = "mailto:${employee.email}">${employee.email}</a></p>
+                <p>Github:<a href = "https://github.com/${employee.getGithub()}">${employee.getGithub()}</a></p>
                 </div>
             `
         }
@@ -235,9 +232,12 @@ convertPrompts = () => {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<link rel="stylesheet" href="./css/style.css"> 
+<title>Employee Profile Generator</title>
 </head>
 <body>
+
+<h1>Team Profile Generator</h1>
 
 <div class="all-employees">
 ${printIndex}
